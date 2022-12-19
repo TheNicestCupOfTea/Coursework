@@ -55,13 +55,11 @@ async function WriteToSubtitle(inText) {
 
 function AppearifyMenu() {
     menu.style.visibility = "visible";
-    menu.style.display = "flex";
     
 }
 
 function DisappearifyMenu() {
     menu.style.visibility = "hidden";
-    menu.style.display = "none";
 }
 
 async function BehindTheVeil() {
