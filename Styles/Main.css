@@ -1,6 +1,6 @@
 
 html {
-    font-size: 15px;
+    font-size: 10px;
     -webkit-user-select: text; /* Safari */
     -ms-user-select: text; /* IE 10 and IE 11 */
     user-select: text; /* Standard syntax */
@@ -209,7 +209,7 @@ div.constellation img {
 
 @media (max-aspect-ratio: 4/5) {
     html {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
 
     body {
@@ -222,7 +222,7 @@ div.constellation img {
 
     #bigtitle {
         width: fit-content;
-        font-size: 2rem;
+        font-size: 1.6rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -239,13 +239,14 @@ div.constellation img {
 
     #subtitle {
         margin-bottom: 1rem;
+        font-size: 1.3rem;
     }
 
     #content {
         margin-bottom: 1rem;
-        font-size: 1.5rem;
-        max-width: 90%;
-        max-height: 10rem;
+        font-size: 1rem;
+        max-width: 100%;
+        max-height: 35vh;
     }
 
     #piccontainer {
@@ -265,16 +266,11 @@ div.constellation img {
     #maincontent {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 90%;
         align-items:center;
         justify-items: center;
         justify-content: space-around;
-        width: 100%;
-        padding-left: 0rem;
-        padding-right: 0rem;
-        padding-top: 0rem;
-        padding-bottom: 0rem;
-        border: none;
+        width: 70%;
     }
 
     #rightside {
