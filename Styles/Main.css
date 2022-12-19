@@ -45,6 +45,7 @@ body {
     justify-items: center;
     align-items: center;
     z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #piccontainer {
@@ -57,6 +58,7 @@ body {
 
 #pic {
     height: 100%;
+    cursor: pointer;
 }
 
 #star {
@@ -128,6 +130,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    cursor: pointer;
 }
 
 #menu li a{
@@ -267,6 +270,11 @@ div.constellation img {
         justify-items: center;
         justify-content: space-around;
         width: 100%;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        border: none;
     }
 
     #rightside {

@@ -30,6 +30,7 @@ window.onload = function(){
     subtitle = document.getElementById('subtitle');
     rightside = document.getElementById('rightside');
     content = document.getElementById('content');
+    maincontent = document.getElementById('maincontent');
 };
 
 async function WriteToTitle(inText) {
@@ -87,6 +88,11 @@ async function StartSequence() {
     CurrentlyChanging = true;
     Start = false;
     rightside.style.display = "flex";
+    maincontent.style.paddingLeft = "5rem";
+    maincontent.style.paddingRight = "5rem";
+    maincontent.style.paddingTop = "2rem";
+    maincontent.style.paddingBottom = "2rem";
+    maincontent.style.border = "1px dotted rgba(255, 255, 255, 0.3)";
     DisappearifyMenu();
     await WriteToContent("");
     WriteToTitle("");
