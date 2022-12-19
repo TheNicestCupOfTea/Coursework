@@ -38,6 +38,10 @@ body {
     }
 }
 
+#preview {
+    display: none;
+}
+
 #maincontent {
     display: flex;
     flex-direction: row;
