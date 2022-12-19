@@ -1,9 +1,9 @@
 
 html {
     font-size: 1vw;
-    -webkit-user-select: text; /* Safari */
-    -ms-user-select: text; /* IE 10 and IE 11 */
-    user-select: text; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 body {
@@ -51,6 +51,7 @@ body {
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 3rem;
+    transition: 0.5s;
 }
 
 #piccontainer {
@@ -113,7 +114,6 @@ body {
     overflow: hidden;
     text-align: center;
     margin-bottom: 1.5rem;
-
 }
 
 #menu{
@@ -137,16 +137,25 @@ body {
     cursor: pointer;
 }
 
+.clickable {
+    color: rgb(255, 255, 255);
+    background: none;
+    transition: 0.3s;
+}
+
+.clickable:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
 #menu li a{
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
     text-align: center;
-}
-
-#menu li a:hover {
-    background-color: white;
-    color: black;
 }
 
 #content {
@@ -157,7 +166,7 @@ body {
     height: max-content;
     width: fit-content;
     max-width: 50rem;
-    max-height: 20rem;
+    max-height: 30rem;
     overflow-y: hidden;
 }
 
@@ -169,7 +178,7 @@ body {
     left: 0px;
 }
 
-ul {
+#menu {
     padding: 0;
     list-style-type: none;
     width: 100%;
@@ -209,6 +218,42 @@ div.constellation img {
 #cup {
     top: 70vh;
     left: 80vw;
+}
+
+.mylist {
+    font-size: 1rem;
+}
+
+button {
+    font-family: "Press Start 2P";
+    height: 3rem;
+    font-size: 1rem;
+    flex-grow: 1;
+    border: none;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#picselector {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#currentpiccontainer {
+    display: flex;
+    height: 20rem;
+    justify-items: center;
+    align-items: center;
+}
+
+#currentpic {
+    height: 100%;
 }
 
 @media (max-aspect-ratio: 4/5) {
@@ -251,7 +296,7 @@ div.constellation img {
         font-size: 1rem;
         max-width: 100%;
         max-height: 35vh;
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
 
     #piccontainer {

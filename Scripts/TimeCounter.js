@@ -1,12 +1,7 @@
-var daystilbday;
-var hourstilbday;
-var minutestilbday;
-var secondstilbday;
-
 var birthday;
 
 function update() {
-    todaydate = new Date("03/12/2022");
+    todaydate = new Date();
     birthday = `My birthday `;
     if (todaydate.getMonth()+1 == 4 && todaydate.getDate() == 12) {
         birthday += 'is today! Yay!'

@@ -1,26 +1,68 @@
 var typingspeed = 80;
 
+StartSubtitles = [
+    "Aspiring internet artisan",
+    "Pianist bunny girl",
+    "The Tea",
+    "Spooky internet ghost",
+    "Formerly a frog",
+    "Everything at once",
+    "Jack of all trades",
+    "Certified bunny liker",
+    "Wannabe artist",
+    "Fruit or perhaps a berry",
+    "Likes violet a lot",
+    "Человек в межпланетном пространстве",
+    "Antonymph of the internet",
+    "Been there, done that",
+    "[Insert funny descriptor here]",
+    "Been teleporting bread for 3 days",
+    "月の兎",
+    "The most person ever"
+];
 
 Contents = {
-    0: `<p>Hi! I am TheNicestCupOfTea, and I am an aspiring internet artisan. I do <b>stuff</b>.</p> <p>Currently I am a student, third year of my Software Engineering degree.</p> <p>${birthday}</p>`
+    0: `<p>Hi! I am TheNicestCupOfTea, and I am an aspiring internet artisan. I do <b>stuff</b>.</p>
+         <p>Currently I am a student, third year of my Software Engineering degree.</p> 
+         <p>${birthday}</p>`,
+
+    1: `Discord - <a class='clickable' onclick="Clipboard('TheNicestCupOfTea 🥕#2667');">TheNicestCupOfTea 🥕#2667</a></p>
+        <p>Github - <a class='clickable' onclick="window.open('http://github.com/thenicestcupoftea')">github.com/thenicestcupoftea</a></p>
+        <p>Itch - <a class='clickable' onclick="window.open('http://thenicestcupoftea.itch.io')">thenicestcupoftea.itch.io</a></p>`,
+
+    2: `<div id="picselector">
+        <div id="currentpiccontainer"><img id="currentpic" src="./Images/pics/1.png" /></div>
+        <div id="buttons">
+            <button class='clickable' onclick='prevPicButton();'>\<</button>
+            <button class='clickable' onclick='autoPicButton();'>Auto</button>
+            <button class='clickable' onclick='nextPicButton();'>\></button>
+        </div>
+        </div>`
 }
 
 BasicMenu = [
     ["About me","Transition(Contents[0],\"About me\");"],
-    ["Contacts",""],
-    ["Stuff",""]
+    ["Contacts","Transition(Contents[1],\"Contacts\");"],
+    ["Drawings","Transition(Contents[2],\"Drawings\");"]
 ]
 
 SecretContents = {
-    0 : "<p>I close my eyes and <b>SEIZE IT</b></p> <p>I clench my fists and <b>BEAT IT</b></p> <p>I light my torch and <b>BURN IT</b></p> <p><b><i>I&nbsp;&nbsp;&nbsp;A&nbsp;M&nbsp;&nbsp;&nbsp;T&nbsp;H&nbsp;E&nbsp;&nbsp;&nbsp;B&nbsp;E&nbsp;A&nbsp;S&nbsp;T&nbsp;</i></b></p> <p><b><i>I&nbsp;&nbsp;&nbsp;W&nbsp;O&nbsp;R&nbsp;S&nbsp;H&nbsp;I&nbsp;P</i></b></p>",
-    1 : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
-    2 : "<iframe width=500px height=300px src='https://www.youtube.com/embed/Vau_LxfW_E0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+    0 : `<p>I close my eyes and <b>SEIZE IT</b></p> 
+        <p>I clench my fists and <b>BEAT IT</b></p> 
+        <p>I light my torch and <b>BURN IT</b></p> 
+        <p><b><i>I&nbsp;&nbsp;&nbsp;A&nbsp;M&nbsp;&nbsp;&nbsp;T&nbsp;H&nbsp;E&nbsp;&nbsp;&nbsp;B&nbsp;E&nbsp;A&nbsp;S&nbsp;T&nbsp;</i></b></p> 
+        <p><b><i>I&nbsp;&nbsp;&nbsp;W&nbsp;O&nbsp;R&nbsp;S&nbsp;H&nbsp;I&nbsp;P</i></b></p>`,
+
+    1 : `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> 
+        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>`,
+    
+    2 : `<iframe width=500px height=300px src='https://www.youtube.com/embed/7KBTTn58iXg' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>`
 }
 
 SecretMenu = [
-    ["Death Grip","Transition(SecretContents[0],\"Death Grip :3\");"], 
+    ["Death Grips","Transition(SecretContents[0],\"Beware :3\");"], 
     ["Lorem Ipsum","Transition(SecretContents[1],\"Dolor sit amet?\");"], 
-    ["Sex","Transition(SecretContents[2],\"SEEEEEEX!\");"]
+    ["Video","Transition(SecretContents[2],\"Embed astonishing success.\");"]
 ]
 
 window.onload = function(){
@@ -32,6 +74,14 @@ window.onload = function(){
     content = document.getElementById('content');
     maincontent = document.getElementById('maincontent');
 };
+
+async function Clipboard(inText) {
+    navigator.clipboard.writeText(inText).then(() => {
+        alert("Copied!");
+    }).catch( () => {
+        alert("Uh oh, stinky! Something went wrong!");
+    });
+}
 
 async function WriteToTitle(inText) {
     icon.style.visibility = "hidden";
@@ -70,27 +120,6 @@ async function BehindTheVeil() {
     }
     veil.style.visibility = "hidden"
 }
-
-StartSubtitles = [
-                    "Aspiring internet artisan",
-                    "Pianist bunny girl",
-                    "The Tea",
-                    "Spooky internet ghost",
-                    "Formerly a frog",
-                    "Everything at once",
-                    "Professional jack of all trades",
-                    "Certified bunny liker",
-                    "Wannabe artist",
-                    "Fruit or perhaps a berry",
-                    "Likes violet a lot",
-                    "Человек в межпланетном пространстве",
-                    "Antonymph of the internet",
-                    "Been there, done that",
-                    "[Insert funny descriptor here]",
-                    "Been teleporting bread for 3 days",
-                    "月の兎",
-                    "The most person ever"
-                ];
 
 function RandomBTW(min,max) {
     return Math.round(Math.random()*(max-min)+min);
@@ -132,9 +161,9 @@ var clicknum = 0;
 async function Click() {
     StartSequence();
     clicknum++;
-    if (clicknum==10) {
+    if (clicknum==20) {
         if (CurrentlyChanging) {
-            clicknum = 9; return;
+            clicknum = 19; return;
         }
         SecretSequence();
     }
@@ -187,7 +216,7 @@ async function WriteToContent(inText) {
 function CreateMenu(inMenu) {
     menu.innerHTML = "";
     for (thing of inMenu) {
-        menu.innerHTML += "<li onclick='"+thing[1]+"'><a>"+thing[0]+"</a></li>";
+        menu.innerHTML += "<li ><a onclick='"+thing[1]+"' class='clickable'>"+thing[0]+"</a></li>";
     }
 }
 
