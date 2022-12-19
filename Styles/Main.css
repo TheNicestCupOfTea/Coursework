@@ -1,0 +1,308 @@
+
+html {
+    font-size: 16px;
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10 and IE 11 */
+    user-select: text; /* Standard syntax */
+}
+
+body {
+    background-color: black;
+    font-family: "Press Start 2P";
+    color: white;
+    background: url("/Images/Background_Dark.png");
+    background-size: 100% 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#veil {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    background-color: black;
+    opacity: 1;
+}
+
+@keyframes get_rotated {
+    0% {
+        transform: rotate(-10deg)
+    }
+    100% {
+        transform: rotate(10deg)
+    }
+}
+
+#maincontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    z-index: 10;
+}
+
+#piccontainer {
+    display: flex;
+    height: 30rem;
+    justify-items: center;
+    align-items: center;
+    animation:get_rotated 2s alternate ease-in-out infinite;
+}
+
+#pic {
+    height: 100%;
+}
+
+#star {
+    height: 3rem;
+    visibility: hidden;
+}
+
+#star img {
+    height: 100%;
+}
+
+#rightside {
+    display: none;
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-grow: 3;
+    margin-left : 5%;
+}
+
+#bigtitle {
+    font-size: 2rem;
+    display: flex;
+    flex-grow: 1;  
+    width: fit-content;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 0.7rem;
+    width: fit-content;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+#subtitle {
+    font-size: 1.2rem;
+    width: fit-content;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+#menu{
+    text-align: center;
+    font-size: 1rem;
+    display: flex; 
+    visibility: hidden;
+    flex-direction: row;
+    list-style-type: none;
+    height: 2ch;
+    width: 100%;
+}
+
+#menu li {
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menu li a{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+
+#menu li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#content {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align:center;
+    overflow:hidden;
+    height: max-content;
+    width: fit-content;
+    max-width: 50rem;
+    max-height: 20rem;
+    overflow-y: hidden;
+}
+
+#decorations {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+}
+
+div.constellation {
+    height: 5vw;
+    position: absolute;
+    transform: rotate(0deg);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+    z-index: 5;
+}
+
+div.constellation:hover {
+    transform: rotate(20deg);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+div.constellation img {
+    height: 100%;
+}
+
+#bun {
+    top: 10vh;
+    left: 5vw;
+}
+
+#cup {
+    top: 70vh;
+    left: 80vw;
+}
+
+@media (max-aspect-ratio: 4/5) {
+    html {
+        font-size: 2.5vw;
+    }
+
+    body {
+        background-size: auto 150%;
+    }
+
+    title {
+        width:100%;
+    }
+
+    #bigtitle {
+        width: fit-content;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    #title {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #subtitle {
+        margin-bottom: 1rem;
+    }
+
+    #content {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        max-width: 100%;
+        max-height: 10rem;
+    }
+
+    #piccontainer {
+        display: flex;
+        justify-content: center;
+        height:fit-content;
+        width: 50%;
+        margin-bottom: 1rem;
+    }
+
+    #pic {
+        width: 100%;
+        height: auto;
+        z-index: 5;
+    }
+
+    #maincontent {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items:center;
+        justify-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    #rightside {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 0%;
+    }
+
+    #menu {
+        flex-direction: row;
+        height:fit-content;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #star {
+        height: 3rem;
+    }
+
+    #bun {
+        top: 5vh;
+        left: 5vw;
+        z-index: 10;
+    }
+    
+    #cup {
+        top: 25vh;
+        left: 80vw;
+        z-index: 10;
+    }
+
+    div.constellation {
+        height: 5rem;
+    }
+}
