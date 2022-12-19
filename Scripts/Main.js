@@ -12,7 +12,7 @@ BasicMenu = [
 ]
 
 SecretContents = {
-    0 : "<p>I close my eyes and SEIZE IT</p> <p>I clench my fists and BEAT IT</p> <p>I light my torch and BURN IT</p> <p>I AM THE BEAST I WORSHIP</p>",
+    0 : "<p>I close my eyes and <b>SEIZE IT</b></p> <p>I clench my fists and <b>BEAT IT</b></p> <p>I light my torch and <b>BURN IT</b></p> <p><b><i>I&nbsp;&nbsp;&nbsp;A&nbsp;M&nbsp;&nbsp;&nbsp;T&nbsp;H&nbsp;E&nbsp;&nbsp;&nbsp;B&nbsp;E&nbsp;A&nbsp;S&nbsp;T&nbsp;</i></b></p> <p><b><i>I&nbsp;&nbsp;&nbsp;W&nbsp;O&nbsp;R&nbsp;S&nbsp;H&nbsp;I&nbsp;P</i></b></p>",
     1 : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
     2 : "<iframe width=500px height=300px src='https://www.youtube.com/embed/Vau_LxfW_E0' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 }
