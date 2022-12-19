@@ -2,7 +2,7 @@ var typingspeed = 80;
 
 
 Contents = {
-    0: "<p>Hi! I am TheNicestCupOfTea, and I am an aspiring internet artisan. I do <b>stuff</b>.</p> <p>Currently I am a student, third year of my Software Engineering degree.</p>"
+    0: `<p>Hi! I am TheNicestCupOfTea, and I am an aspiring internet artisan. I do <b>stuff</b>.</p> <p>Currently I am a student, third year of my Software Engineering degree.</p> <p>${birthday}</p>`
 }
 
 BasicMenu = [
@@ -71,14 +71,32 @@ async function BehindTheVeil() {
     veil.style.visibility = "hidden"
 }
 
-StartSubtitles = ["Aspiring internet artisan","Pianist bunny girl","The Tea"];
+StartSubtitles = [
+                    "Aspiring internet artisan",
+                    "Pianist bunny girl",
+                    "The Tea",
+                    "Spooky internet ghost",
+                    "Formerly a frog",
+                    "Everything at once",
+                    "Professional jack of all trades",
+                    "Certified bunny liker",
+                    "Wannabe artist",
+                    "Fruit or perhaps a berry",
+                    "Likes violet a lot",
+                    "Человек в межпланетном пространстве",
+                    "Antonymph of the internet",
+                    "Been there, done that",
+                    "[Insert funny descriptor here]",
+                    "Been teleporting bread for 3 days",
+                    "月の兎",
+                    "The most person ever"
+                ];
 
 function RandomBTW(min,max) {
     return Math.round(Math.random()*(max-min)+min);
 }
 
 function RandomSubtitle() {
-    console.log(RandomBTW(0, StartSubtitles.length));
     return StartSubtitles[RandomBTW(0, StartSubtitles.length-1)];
 }
 
