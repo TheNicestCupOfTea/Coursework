@@ -39,7 +39,7 @@ body {
 }
 
 #preview {
-    display: none;
+    height: 0px;
 }
 
 #maincontent {
