@@ -10,7 +10,7 @@ async function RandomizeImage() {
                 await sleep(500);
                 continue;
             }
-            sorce = "/Images/Me_frames/Literally_me_"
+            sorce = "./Images/Me_frames/Literally_me_"
             sorce += i;
             sorce += ".png";
             pic.src = sorce;
