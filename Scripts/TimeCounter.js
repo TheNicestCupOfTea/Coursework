@@ -15,7 +15,7 @@ function update() {
             bdate.setMonth(3);
             difference = (bdate - todaydate);
         } else {
-            birthday += 'has already passed this year, so you will have to wait '
+            birthday += 'has already passed this year, it\'s in '
             
             bdate = new Date();
             bdate.setFullYear(todaydate.getFullYear() + 1);

@@ -42,7 +42,7 @@ Contents = {
 
 BasicMenu = [
     ["About me","Transition(Contents[0],\"About me\");"],
-    ["Contacts","Transition(Contents[1],\"Contacts\");"],
+    ["Links","Transition(Contents[1],\"Links\");"],
     ["Drawings","Transition(Contents[2],\"Drawings\");"]
 ]
 

@@ -81,6 +81,7 @@ body {
     flex-direction: column;
     width: fit-content;
     height: 100%;
+    max-height: 80vh;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -316,11 +317,12 @@ button {
     #maincontent {
         display: flex;
         flex-direction: column;
-        height: 90%;
+        height: fit-content;
+        max-height: 90%;
         align-items:center;
         justify-items: center;
         justify-content: space-around;
-        width: 70%;
+        width: 80%;
     }
 
     #rightside {
