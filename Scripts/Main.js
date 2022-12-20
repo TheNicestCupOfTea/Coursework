@@ -221,6 +221,9 @@ function CreateMenu(inMenu) {
 }
 
 async function Transition(inContent,inSubtitle) {
+    if (subtitle.innerHTML == inSubtitle) {
+        return;
+    }
     CurrentlyChanging = true;
     DisappearifyMenu();
     if (content.innerHTML == "") {
