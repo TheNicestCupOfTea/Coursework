@@ -48,7 +48,7 @@ function autoPicButton() {
 
 function autoPic(){
     if (!auto) {
-        interval = setInterval(nextPic, 2000);
+        interval = setInterval(nextPic, 1000);
     } else {
         clearInterval(interval);
     }
