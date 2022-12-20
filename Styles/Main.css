@@ -31,10 +31,10 @@ body {
 
 @keyframes get_rotated {
     0% {
-        transform: rotate(-10deg)
+        transform: rotate(-5deg)
     }
     100% {
-        transform: rotate(10deg)
+        transform: rotate(5deg)
     }
 }
 
@@ -59,7 +59,7 @@ body {
     height: 30rem;
     justify-items: center;
     align-items: center;
-    animation:get_rotated 2s alternate ease-in-out infinite;
+    animation:get_rotated 3s alternate ease-in-out infinite;
 }
 
 #pic {

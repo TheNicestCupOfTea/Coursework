@@ -14,7 +14,7 @@ async function RandomizeImage() {
             sorce += i;
             sorce += ".png";
             pic.src = sorce;
-            await sleep(100);
+            await sleep(150);
         }
     }
 }
