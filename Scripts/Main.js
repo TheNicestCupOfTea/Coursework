@@ -29,11 +29,16 @@ Contents = {
          <p>Currently I am a student, third year of my Software Engineering degree.</p> 
          <p>${birthday}</p>`,
 
-    1: `Discord - <a class='clickable' onclick="Clipboard('TheNicestCupOfTea 🥕#2667');">TheNicestCupOfTea 🥕#2667</a></p>
+    1: `<p>I am a very "If you want to do it good, do it yourself" kind of person.</p>
+        <p>I try to do as much as possible on my own, so I guess I could call myself a creative jack of all trades.</p>
+        <p>My dream is to become a capable one-man-band indie game developer.</p>
+        <p>That's why I learnt to do music composing, graphic design, coding and game developent.</p>`,
+
+    2: `Discord - <a class='clickable' onclick="Clipboard('TheNicestCupOfTea 🥕#2667');">TheNicestCupOfTea 🥕#2667</a></p>
         <p>Github - <a class='clickable' onclick="window.open('http://github.com/thenicestcupoftea')">github.com/thenicestcupoftea</a></p>
         <p>Itch - <a class='clickable' onclick="window.open('http://thenicestcupoftea.itch.io')">thenicestcupoftea.itch.io</a></p>`,
 
-    2: `<div id="picselector">
+    3: `<div id="picselector">
         <div id="currentpiccontainer"><img id="currentpic" src="./Images/pics/1.png" /></div>
         <div id="buttons">
             <button class='clickable' onclick='prevPicButton();'>\<</button>
@@ -46,8 +51,9 @@ Contents = {
 //Менюшка, которая появляется в начале.
 BasicMenu = [
     ["About me","Transition(Contents[0],\"About me\");"],
-    ["Links","Transition(Contents[1],\"Links\");"],
-    ["Drawings","Transition(Contents[2],\"Drawings\");"]
+    ["What I do","Transition(Contents[1],\"What I do\");"],
+    ["Links","Transition(Contents[2],\"Links\");"],
+    ["Drawings","Transition(Contents[3],\"Drawings\");"]
 ]
 
 //Содержания для тестовой менюшки.
