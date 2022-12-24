@@ -32,7 +32,7 @@ Contents = {
     1: `<p>I am a very "If you want to do it good, do it yourself" kind of person.</p>
         <p>I try to do as much as possible on my own, so I guess I could call myself a creative jack of all trades.</p>
         <p>My dream is to become a capable one-man-band indie game developer.</p>
-        <p>That's why I learnt to do music composing, graphic design, coding and game developent.</p>`,
+        <p>That's why I learnt to do music composing, graphic design, coding and game developent. All by my own.</p>`,
 
     2: `Discord - <a class='clickable' onclick="Clipboard('TheNicestCupOfTea 🥕#2667');">TheNicestCupOfTea 🥕#2667</a></p>
         <p>Github - <a class='clickable' onclick="window.open('http://github.com/thenicestcupoftea')">github.com/thenicestcupoftea</a></p>
