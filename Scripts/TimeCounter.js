@@ -1,5 +1,6 @@
 var birthday;
 
+//Запись информации о моем дне рождения в переменную
 function update() {
     todaydate = new Date();
     birthday = `My birthday `;
@@ -31,6 +32,8 @@ function update() {
     }
 }
 
-update();
+//Записываем в переменную в самом начале.
+update()
 
+//Периодическое обновление информации о моем дне рождения.
 setTimeout(() => update(), 1000);

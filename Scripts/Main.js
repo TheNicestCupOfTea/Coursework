@@ -1,5 +1,7 @@
-var typingspeed = 80;
+//Скорость, с которой пишется текст (мс между буквами)
+var typingspeed = 50;
 
+//Возможные подзаголовки на начальном экране.
 StartSubtitles = [
     "Aspiring internet artisan",
     "Pianist bunny girl",
@@ -21,6 +23,7 @@ StartSubtitles = [
     "The most person ever"
 ];
 
+//Содержание, которое подгружается при переключении в менюшке.
 Contents = {
     0: `<p>Hi! I am TheNicestCupOfTea, and I am an aspiring internet artisan. I do <b>stuff</b>.</p>
          <p>Currently I am a student, third year of my Software Engineering degree.</p> 
@@ -40,12 +43,16 @@ Contents = {
         </div>`
 }
 
+//Менюшка, которая появляется в начале.
 BasicMenu = [
     ["About me","Transition(Contents[0],\"About me\");"],
     ["Links","Transition(Contents[1],\"Links\");"],
     ["Drawings","Transition(Contents[2],\"Drawings\");"]
 ]
 
+//Содержания для тестовой менюшки.
+// 1 - Тест на огромный текст
+// 2 - Тест на встраивание видео в содержание
 SecretContents = {
     0 : `<p>I close my eyes and <b>SEIZE IT</b></p> 
         <p>I clench my fists and <b>BEAT IT</b></p> 
@@ -59,12 +66,14 @@ SecretContents = {
     2 : `<iframe width=500px height=300px src='https://www.youtube.com/embed/7KBTTn58iXg' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>`
 }
 
+//Сама тестовая менюшка.
 SecretMenu = [
     ["Death Grips","Transition(SecretContents[0],\"Beware :3\");"], 
     ["Lorem Ipsum","Transition(SecretContents[1],\"Dolor sit amet?\");"], 
     ["Video","Transition(SecretContents[2],\"Embed astonishing success.\");"]
 ]
 
+//Получаем при загрузке страницы все нужные элементы.
 window.onload = function(){
     menu = document.getElementById('menu');
     title = document.getElementById('titletext');
@@ -75,6 +84,7 @@ window.onload = function(){
     maincontent = document.getElementById('maincontent');
 };
 
+//Функция для копирования текста в буфер обмена.
 async function Clipboard(inText) {
     navigator.clipboard.writeText(inText).then(() => {
         alert("Copied!");
@@ -83,6 +93,7 @@ async function Clipboard(inText) {
     });
 }
 
+//Функция записи в главный заголовок.
 async function WriteToTitle(inText) {
     icon.style.visibility = "hidden";
     title.innerHTML = ""
@@ -94,7 +105,7 @@ async function WriteToTitle(inText) {
     await sleep(typingspeed);
 }
 
-
+//Функция записи в подзаголовок.
 async function WriteToSubtitle(inText) {
     subtitle.innerHTML = ""
     for (var c of inText) {
@@ -103,15 +114,18 @@ async function WriteToSubtitle(inText) {
     }
 }
 
+//Функция показа кнопок меню.
 function AppearifyMenu() {
     menu.style.visibility = "visible";
     
 }
 
+//Функция скрытыя кнопок меню.
 function DisappearifyMenu() {
     menu.style.visibility = "hidden";
 }
 
+//Функция открытия "завесы", т.е. черного фона в начале.
 async function BehindTheVeil() {
     veil = document.getElementById('veil');
     for (var i=1; i>0; i-=.1) {
@@ -121,16 +135,20 @@ async function BehindTheVeil() {
     veil.style.visibility = "hidden"
 }
 
+//Функция получения случайного числа в диапазоне от min до max.
 function RandomBTW(min,max) {
     return Math.round(Math.random()*(max-min)+min);
 }
 
+//Функция записи в подзаголовок случайного текста из списка.
 function RandomSubtitle() {
     return StartSubtitles[RandomBTW(0, StartSubtitles.length-1)];
 }
 
+//Флаг открытия сайта
 var Start = true;
 
+//Само раскрытие сайта из картинки
 async function StartSequence() {
     if (!Start || CurrentlyChanging) return;
     CurrentlyChanging = true;
@@ -140,7 +158,7 @@ async function StartSequence() {
     maincontent.style.paddingRight = "5rem";
     maincontent.style.paddingTop = "2rem";
     maincontent.style.paddingBottom = "2rem";
-    maincontent.style.border = "1px dotted rgba(255, 255, 255, 0.3)";
+    maincontent.style.border = "1px dotted rgba(255, 255, 255, 0.6)";
     DisappearifyMenu();
     await WriteToContent("");
     WriteToTitle("");
@@ -151,13 +169,15 @@ async function StartSequence() {
     CreateMenu(BasicMenu);
     AppearifyMenu();
     CurrentlyChanging = false;
-    
 }
 
+//Флаг того, что меняется состояние сайта. Нужно для избежания переключения на два разных состояния.
 CurrentlyChanging = false;
 
+//Счетчик нажатий на картинку
 var clicknum = 0;
 
+//Нажатие на картинку. Если нажать 20 раз, то открывается тестовая менюшка.
 async function Click() {
     StartSequence();
     clicknum++;
@@ -169,6 +189,7 @@ async function Click() {
     }
 }
 
+//Раскрытие тестовой менюшки.
 async function SecretSequence() {
     CurrentlyChanging = true;
     content.innerHTML = "";
@@ -184,6 +205,7 @@ async function SecretSequence() {
     CurrentlyChanging = false;
 }
 
+//Схлопывание содержания (нужно для переходов)
 async function CollapseContent() {
     if (content.innerHTML != "") {
         for (var i=100; i>0; i-=5) {
@@ -194,6 +216,7 @@ async function CollapseContent() {
     content.style.width = "0%";
 }
 
+//Раскрытие содержания (нужно для переходов)
 async function ExpandContent() {
     for (var i=0; i<100; i+=5) {
         content.style.width = i+"%";
@@ -202,6 +225,7 @@ async function ExpandContent() {
     content.style.width = "100%";
 }
 
+//Функция записи в содержание
 async function WriteToContent(inText) {
     if (content.innerHTML == "") {
         content.innerHTML = inText;
@@ -212,7 +236,7 @@ async function WriteToContent(inText) {
     await ExpandContent();
 }
 
-
+//Функция создания меню
 function CreateMenu(inMenu) {
     menu.innerHTML = "";
     for (thing of inMenu) {
@@ -220,6 +244,7 @@ function CreateMenu(inMenu) {
     }
 }
 
+//Функция перехода между страницами менюшки
 async function Transition(inContent,inSubtitle) {
     if (subtitle.innerHTML == inSubtitle) {
         return;

@@ -5,14 +5,8 @@
     <link rel="stylesheet" href="./Styles/Main.css">
     <link rel="icon" type="image/x-icon" href="star.png">
     <link rel="shortcut icon" type="image/x-icon" href="star.png">
-</head>
-<body>
-    <script src="./Scripts/PicSelector.js"></script>
-    <script src="./Scripts/TimeCounter.js"></script>
-    <script src="./Scripts/ChangingImage.js"></script>
-    <script src="./Scripts/Main.js"></script>
-    
 
+    <!-- Кусок для правильного отображения превью страницы при размещении ссылки на сторонних сайтах. -->
     <meta property='og:title' content='TheNicestCupOfTea' />
     <meta property="og:type" content="website">
     <meta property='og:image' content='https://thenicestcupoftea.github.io/Images/preview_square.png'/>
@@ -20,31 +14,57 @@
     <meta property='og:image:width' content='600' />
     <meta property='og:image:height' content='600' />
     <img id="preview" src="./Images/preview.png" />
+</head>
+<body>
+    <!-- Загрузка скриптов. -->
+    <script src="./Scripts/PicSelector.js"></script>
+    <script src="./Scripts/TimeCounter.js"></script>
+    <script src="./Scripts/ChangingImage.js"></script>
+    <script src="./Scripts/Main.js"></script>
 
-    <link rel="prefetch" href="./Images/Me_frames/Literally_me_1.png" />
-    <link rel="prefetch" href="./Images/Me_frames/Literally_me_2.png" />
-    <link rel="prefetch" href="./Images/Me_frames/Literally_me_3.png" />
-    <link rel="prefetch" href="./Images/Me_frames/Literally_me_4.png" />
-    <link rel="prefetch" href="./Images/Me_frames/Literally_me_5.png" />
+    <!-- Прогружение картинок. -->
+    <link rel="prefetch" href="./Images/Me_frames/Literally_me_small_1.png" />
+    <link rel="prefetch" href="./Images/Me_frames/Literally_me_small_2.png" />
+    <link rel="prefetch" href="./Images/Me_frames/Literally_me_small_3.png" />
+    <link rel="prefetch" href="./Images/Me_frames/Literally_me_small_4.png" />
+    <link rel="prefetch" href="./Images/Me_frames/Literally_me_small_5.png" />
     
+    <!-- Созвездия на фоне -->
     <div id="decorations">
         <div class="constellation" id="bun" onclick="window.open('https://youtu.be/tHi8ixpLobM');"><img src="./Images/bun.png" /></div>
         <div class="constellation" id="cup"><img src="./Images/cup.png" /></div>
     </div>
+
+    <!-- Черная "завеса" в начале. -->
     <div id="veil"></div>
+
+    <!-- Основная часть страницы. -->
     <div id="maincontent">
+        <!-- Аватарка. -->
         <div id="piccontainer">
             <img id="pic" src="./Images/Literally_me.png" onclick="Click()">
         </div>
+
+        <!-- Правая часть. -->
         <div id="rightside">
+            <!-- Заголовок. -->
             <div id="title">
                 <div id="bigtitle">
+                    <!-- Главный заголовок. -->
                     <div id="titletext"></div>
+
+                    <!-- Звездочка в конце. -->
                     <div id="star"><img src="./Images/star.png"></div>
                 </div>
+
+                <!-- Подзаголовок. -->
                 <div id="subtitle"></div>
             </div>
+
+            <!-- Содержание. -->
             <div id="content"></div>
+
+            <!-- Кнопки менюшки. -->
             <ul id="menu"></ul>
         </div>
     </div>
