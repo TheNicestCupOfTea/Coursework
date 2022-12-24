@@ -29,7 +29,7 @@ Contents = {
          <p>Currently I am a student, third year of my Software Engineering degree.</p> 
          <p>${birthday}</p>`,
 
-    1: `<p>I am a very "If you want to do it good, do it yourself" kind of person.</p>
+    1: `<p>I am very much a "If you want something done right, do it yourself" kind of person.</p>
         <p>I try to do as much as possible on my own, so I guess I could call myself a creative jack of all trades.</p>
         <p>My dream is to become a capable one-man-band indie game developer.</p>
         <p>That's why I learnt to do music composing, graphic design, coding and game developent.</p>`,
